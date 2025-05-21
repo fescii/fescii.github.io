@@ -559,6 +559,7 @@ class TerminalConsole {
     clearTerminal() {
         this.content.innerHTML = '';
         this.addLine('Terminal cleared.', 'dim-text');
+        this.showWelcomeMessage();
     }
 
     exitTerminal() {
@@ -637,6 +638,14 @@ class TerminalConsole {
             </div>
         `;
         
+        // Apple Music player container
+        const musicPlayer = document.createElement('div');
+        musicPlayer.className = 'apple-music-player';
+        musicPlayer.innerHTML = `
+            <div class="music-caption">🎵 Currently Playing:</div>
+            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/song/the-end/1192962310?theme=dark"></iframe>
+        `;
+        
         // System ready message with animated prompt
         const systemReadyMsg = document.createElement('div');
         systemReadyMsg.className = 'system-ready';
@@ -650,6 +659,7 @@ class TerminalConsole {
         // Add all elements to terminal content
         this.content.appendChild(welcomeContainer);
         this.content.appendChild(paymentLinks);
+        this.content.appendChild(musicPlayer);
         this.addBlankLine();
         this.content.appendChild(systemReadyMsg);
         this.addBlankLine();

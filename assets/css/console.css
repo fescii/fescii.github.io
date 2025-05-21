@@ -2261,3 +2261,56 @@ body.light-theme .dim-text {
         opacity: 1;
     }
 }
+
+/* Spotify Player Styles */
+.apple-music-player {
+    margin: 25px 0;
+    padding: 15px;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(30, 30, 30, 0.1)
+    );
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border-left: 3px solid #FA243C; /* Apple Music red */
+    animation: musicPlayerAppear 0.6s ease-out forwards;
+    opacity: 0;
+    transform: scale(0.98);
+}
+
+@keyframes musicPlayerAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.music-caption {
+    display: block;
+    color: #FA243C; /* Apple Music red */
+    font-style: italic;
+    margin: 0 0 15px;
+    text-align: start;
+    font-weight: 600;
+    font-size: 0.95em;
+    letter-spacing: 0.5px;
+}
+
+.apple-music-player iframe {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.apple-music-player iframe:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
