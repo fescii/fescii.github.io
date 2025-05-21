@@ -613,7 +613,7 @@ class TerminalConsole {
         // Version info with animated appearance
         const versionInfo = document.createElement('div');
         versionInfo.className = 'welcome-version-info';
-        versionInfo.innerHTML = `<span class="dim-text">Version 1.0.0 | ${dateString} at ${timeString}</span>`;
+        versionInfo.innerHTML = `<span class="dim-text">Version 0.1.16 | ${dateString} at ${timeString}</span>`;
         
         // Adding elements to container
         welcomeContainer.appendChild(asciiArt);
@@ -667,7 +667,7 @@ class TerminalConsole {
         // Simulate terminal boot sequence
         setTimeout(() => {
             welcomeContainer.classList.add('show');
-            this.scrollToBottom();
+            // this.scrollToBottom();
         }, 300);
     }
 

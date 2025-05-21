@@ -144,22 +144,4 @@ document.addEventListener('DOMContentLoaded', () => {
             terminalContainer.style.display = 'none';
         }, 500);
     });
-    
-    // 5. Theme toggle functionality (light/dark mode)
-    // This can be expanded in the future with more themes
-    const themeToggle = document.createElement('div');
-    themeToggle.classList.add('theme-toggle');
-    themeToggle.innerHTML = '<i class="bi bi-sun-fill"></i>';
-    
-    // Insert theme toggle before the time display
-    const timeDisplay = document.querySelector('.time-display');
-    terminalHeader.insertBefore(themeToggle, timeDisplay);
-    
-    let isDarkMode = true;
-    
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('light-mode');
-        isDarkMode = !isDarkMode;
-        themeToggle.innerHTML = isDarkMode ? '<i class="bi bi-sun-fill"></i>' : '<i class="bi bi-moon-fill"></i>';
-    });
 });
