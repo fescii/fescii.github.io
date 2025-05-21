@@ -1,0 +1,63 @@
+/* filepath: /home/femar/AO3/fescii.github.io/assets/css/console.css */
+
+:root {
+    --bg-color: #1e1e1e;
+    --text-color: #ffffff;
+    --command-color: #00ff00;
+    --error-color: #ff5555;
+    --warning-color: #ffcc00;
+    --border-color: #444444;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.terminal {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 20px;
+    height: 80vh;
+    overflow-y: auto;
+}
+
+.command {
+    color: var(--command-color);
+}
+
+.error {
+    color: var(--error-color);
+}
+
+.warning {
+    color: var(--warning-color);
+}
+
+.dark-mode {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}

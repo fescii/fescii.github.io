@@ -1,0 +1,90 @@
+/* Improved autocomplete positioning and styling */
+.autocomplete-suggestions {
+    /* Position relative to terminal-input-area parent */
+    position: absolute;
+    top: -5px; /* Position above the input area */
+    left: 4px; /* Align with left edge of terminal */
+    transform: translateY(-100%); /* Move up by its own height */
+    width: auto !important;
+    min-width: 250px;
+    max-width: calc(100% - 8px); /* Allow some padding */
+    background-color: rgba(20, 20, 20, 0.95);
+    border: 1px solid var(--cmd-highlight);
+    border-radius: 6px;
+    margin-bottom: 0;
+    padding: 5px 0;
+    z-index: 100; /* Ensure it appears above other content */
+}
+
+/* Style each suggestion item */
+.suggestion-item {
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.suggestion-item:hover,
+.suggestion-item.selected {
+    background-color: rgba(116, 185, 255, 0.2);
+}
+
+/* Add a command symbol before each suggestion */
+.suggestion-item::before {
+    content: '>';
+    color: var(--cmd-highlight);
+    margin-right: 8px;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+/* Style the command and description in suggestions */
+.suggestion-item .command {
+    color: var(--cmd-highlight);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.suggestion-item .description {
+    color: var(--cmd-normal);
+    opacity: 0.8;
+    font-size: 0.9em;
+}
+
+/* Ensure the terminal input area is properly positioned */
+.terminal-input-area {
+    position: relative;
+    padding-bottom: 2px;
+    flex-wrap: wrap; /* Allow the autocomplete to take full width */
+    margin-bottom: 5px; /* Add some space below */
+}
+
+/* Add a scroll indicator when there are many suggestions */
+.autocomplete-suggestions::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    width: 5px;
+    height: 30px;
+    background: linear-gradient(to bottom, 
+                              transparent, 
+                              var(--cmd-highlight) 50%, 
+                              transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.autocomplete-suggestions.scrollable::after {
+    opacity: 0.5;
+}
+
+/* Create responsive behavior */
+@media (max-width: 576px) {
+    .autocomplete-suggestions {
+        min-width: 200px;
+        left: 0;
+    }
+}

@@ -1,0 +1,55 @@
+/* filepath: /home/femar/AO3/fescii.github.io/assets/css/mobile.css */
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+.terminal {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    overflow-y: auto;
+    height: calc(100vh - 40px);
+}
+
+.command-input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+    font-size: 1em;
+    outline: none;
+}
+
+.command-input::placeholder {
+    color: var(--placeholder-color);
+}
+
+.profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    .terminal {
+        padding: 10px;
+        height: calc(100vh - 20px);
+    }
+
+    .command-input {
+        font-size: 0.9em;
+    }
+
+    .profile-image {
+        width: 40px;
+        height: 40px;
+    }
+}
