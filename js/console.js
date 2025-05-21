@@ -608,7 +608,7 @@ class TerminalConsole {
         // Welcome message with typing effect
         const welcomeMessage = document.createElement('div');
         welcomeMessage.className = 'welcome-message';
-        welcomeMessage.innerHTML = `<span class="highlight-text typing-animation">Welcome to ${this.userData.name}'s Portfolio Terminal!</span>`;
+        welcomeMessage.innerHTML = `<span class="highlight-text typing-animation">Welcome to Femar's Portfolio Terminal!</span>`;
         
         // Version info with animated appearance
         const versionInfo = document.createElement('div');
@@ -630,10 +630,10 @@ class TerminalConsole {
                     <i class="bi bi-paypal"></i> PayPal
                 </a>
                 <a href="https://buymeacoffee.com/femar" target="_blank" class="payment-link buymeacoffee">
-                    <i class="bi bi-cup-hot-fill"></i> Buy Me a Coffee
+                    <i class="bi bi-cup-hot-fill"></i> Some Ko-fi
                 </a>
                 <div class="payment-link mpesa">
-                    <i class="bi bi-phone-fill"></i> M-Pesa Till: <span>05381359</span>
+                    <i class="bi bi-phone-fill"></i>Till: <span>05381359</span>
                 </div>
             </div>
         `;
